@@ -8,4 +8,29 @@
   #root {
     @apply h-full m-0;
   }
+
+  #root {
+    @apply flex flex-col;
+  }
+
+  .react-flow__container {
+    @apply flex-1;
+  }
+}
+
+@keyframes moveAlongPath {
+  0% {
+    motion-offset: 0%;
+  }
+  100% {
+    motion-offset: 100%;
+  }
+}
+
+.animated-data-box {
+  position: absolute;
+  z-index: 1000;
+  offset-distance: var(--progress);
+  offset-rotate: 0deg;
+  transition: offset-distance 30ms linear;
 }
